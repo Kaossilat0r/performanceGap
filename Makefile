@@ -9,7 +9,7 @@ timing:
 
 libshadowstack-serial libshadowstack-parallel:
 	$(CC) $(PP_FLAGS) $(OPT_FLAGS) $(LIB_FLAGS) -o lib$(LIBNAME).$(HOSTNAME).so src/driver.c $(LDFLAGS)
-	$(CC) -std=gnu99 $(OPT_FLAGS) -finstrument-functions target.c -L. -l$(LIBNAME).$(HOSTNAME) -o target.$(LIBNAME).$(HOSTNAME).exe
+	$(CC) -std=gnu99 $(OPT_FLAGS) -finstrument-functions target.c $(LDFLAGS) -l$(LIBNAME).$(HOSTNAME) -o target.$(LIBNAME).$(HOSTNAME).exe
 
 
 libshadowstack-serial: PP_FLAGS+=-DSERIAL_OPT
