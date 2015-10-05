@@ -1,0 +1,12 @@
+
+# eclipse
+.cproject
+.project
+.settings/
+
+# src
+*.so
+*.exe
+
+# crap
+.*.swp
